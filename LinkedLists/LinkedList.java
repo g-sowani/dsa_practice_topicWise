@@ -68,6 +68,29 @@ public class LinkedList {
         System.out.println("null");
     }
 
+    public void length() {
+        Node current = head;
+        int count = 0;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        System.out.println("Length of the list: " + count);
+    }
+
+    public int search(int key) {
+        Node current = head;
+        int position = 0;
+        while (current != null) {
+            if (current.data == key) {
+                return position;
+            }
+            position++;
+            current = current.next;
+        }
+        return -1; // key not found
+    }
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.insertAtEnd(10);
@@ -77,5 +100,7 @@ public class LinkedList {
         list.display(); // Output: 0-> 10 -> 20 -> 30 -> null
         list.deleteNode(0);
         list.display();
+        list.length();
+        System.out.println("Index of 20 is : " + list.search(20));
     }
 }
