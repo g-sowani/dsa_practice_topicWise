@@ -1,3 +1,5 @@
+//accepted
+
 import java.util.*;
 import java.lang.Math;
 
@@ -17,5 +19,6 @@ public class A1065Div3 {
         for (int i = 0; i < t; i++) {
             System.out.println(arr.get(i));
         }
+        sc.close();
     }
 }
