@@ -59,13 +59,5 @@ public class FractionalKnapsack {
             }
         }
         System.out.println(score);
-
-
-
-
-
-        // choose the greatest ratio one - keep checking capacity
-        // sort ratios while retaining positions
-
     }
 }
