@@ -7,13 +7,13 @@ public class MinCoins {
         ArrayList<Integer> list = new ArrayList<Integer>();
         int low = 0;
         int high = coins.length;
-        while(amount>0){
+        while (amount > 0) {
             int selected = binarySearch(coins, low, high, amount);
             amount -= coins[selected];
-            high = selected+1;
+            high = selected + 1;
             list.add(coins[selected]);
         }
-        for(int item: list){
+        for (int item : list) {
             System.out.println(item);
         }
 
@@ -28,10 +28,10 @@ public class MinCoins {
             } else if (coins[mid] > amount) {
                 return binarySearch(coins, low, mid, amount);
             } else {
-                return binarySearch(coins, mid+1,high, amount);
+                return binarySearch(coins, mid + 1, high, amount);
             }
         }
 
-        return mid-1;
+        return mid - 1;
     }
 }
