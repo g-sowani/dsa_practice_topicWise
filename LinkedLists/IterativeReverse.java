@@ -25,6 +25,9 @@ public class IterativeReverse {
         return;
     }
 
+    public void insertAtBeginning(int data) {
+        Node newNode = new Node();
+    }
     public void display() {
         Node current = head;
         while (current != null) {
